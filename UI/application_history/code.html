@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Application History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', "Noto Sans", sans-serif;
+        }
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-[#111318] dark:text-white font-display overflow-x-hidden">
+<div class="relative flex flex-col w-full max-w-md mx-auto min-h-screen bg-background-light dark:bg-background-dark shadow-xl overflow-hidden">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-20 flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex size-12 shrink-0 items-center justify-start cursor-pointer hover:opacity-70">
+<span class="material-symbols-outlined text-[#111318] dark:text-white" style="font-size: 24px;">arrow_back</span>
+</div>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Application History</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center cursor-pointer text-[#111318] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full p-2 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="sticky top-[65px] z-10 bg-background-light dark:bg-background-dark pb-2 pt-1">
+<div class="flex gap-3 px-4 py-2 overflow-x-auto no-scrollbar">
+<!-- Active Chip -->
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#111318] dark:bg-white pl-3 pr-4 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-white dark:text-[#111318]" style="font-size: 18px;">check</span>
+<p class="text-white dark:text-[#111318] text-sm font-medium leading-normal">All</p>
+</button>
+<!-- Inactive Chips -->
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 pl-3 pr-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[#616e89] dark:text-gray-400" style="font-size: 18px;">send</span>
+<p class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal">Applied</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 pl-3 pr-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[#616e89] dark:text-gray-400" style="font-size: 18px;">chat_bubble</span>
+<p class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal">Interviewing</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 pl-3 pr-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[#616e89] dark:text-gray-400" style="font-size: 18px;">auto_awesome</span>
+<p class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal">Offer</p>
+</button>
+</div>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 flex flex-col gap-4 px-4 pb-8 pt-2">
+<!-- Date Header -->
+<div class="flex items-center justify-between mt-2">
+<h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">October 2023</h3>
+</div>
+<!-- Card 1: Applied -->
+<div class="group relative flex flex-col bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-800 hover:border-primary/50 transition-all">
+<!-- Header Row -->
+<div class="flex justify-between items-start mb-3">
+<div class="flex gap-3">
+<div class="h-12 w-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center shrink-0 overflow-hidden">
+<img alt="TechFlow Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2SYZn0GJikuPUy1On8Y0E4TqkpOzvVFOZur_N4IlQvK1s8sHYstZVgwd_fgow_kz5tqAgn8KYGhtsY-7SgFm1D0jJl6MJRu19lPClGd9dX7y8un4kZez4MiKdGVfygo1vQvCOGIHIDDJIq73h1clIRPnMzrRDXRwnQQqXiY5XVaJo25Z6fkLWDkT0Yy1JbmQzSDj9RgIPOarM7QehfE0UAg7i4q4wdnJ_i9ycAUHzhIjbu0NPJG90pY2suX2b_PX6jh-BXqE3nKM"/>
+</div>
+<div>
+<h3 class="text-[#111318] dark:text-white font-bold text-base leading-tight">Senior Product Manager</h3>
+<p class="text-[#616e89] dark:text-gray-400 text-sm mt-0.5">TechFlow Inc.</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-900/30 px-2 py-0.5 text-xs font-medium text-blue-700 dark:text-blue-300 ring-1 ring-inset ring-blue-700/10">Applied</span>
+<span class="text-xs text-gray-400">Oct 12</span>
+</div>
+</div>
+<!-- Job Link -->
+<a class="flex items-center gap-1.5 text-primary hover:text-blue-600 dark:hover:text-blue-400 text-sm font-semibold mb-4 w-fit group/link transition-colors" href="#">
+<span>View Job Posting</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-0.5">open_in_new</span>
+</a>
+<!-- Documents Divider -->
+<div class="h-px w-full bg-gray-100 dark:bg-gray-800 mb-3"></div>
+<!-- Documents Grid -->
+<div class="flex flex-wrap gap-2">
+<div class="flex items-center gap-2 rounded-lg bg-gray-50 dark:bg-gray-800 px-3 py-2 border border-gray-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[18px]">description</span>
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 uppercase font-bold tracking-wide leading-none">Resume</span>
+<span class="text-xs font-medium text-gray-700 dark:text-gray-200">Executive_V2</span>
+</div>
+</div>
+<div class="flex items-center gap-2 rounded-lg bg-gray-50 dark:bg-gray-800 px-3 py-2 border border-gray-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[18px]">drafts</span>
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 uppercase font-bold tracking-wide leading-none">Cover</span>
+<span class="text-xs font-medium text-gray-700 dark:text-gray-200">Tech_Focus_1</span>
+</div>
+</div>
+</div>
+<!-- Match Score Badge (Absolute) -->
+<div class="absolute -right-1 -bottom-1 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-r from-green-500 to-emerald-500 text-white text-[10px] font-bold px-2 py-1 rounded-tl-lg rounded-br-lg shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">auto_awesome</span>
+                    92% Match
+                </div>
+</div>
+<!-- Card 2: Interviewing -->
+<div class="relative flex flex-col bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-800 hover:border-primary/50 transition-all">
+<div class="flex justify-between items-start mb-3">
+<div class="flex gap-3">
+<div class="h-12 w-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center shrink-0 overflow-hidden">
+<img alt="Creative Solutions Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjSlELbT8S1pjus2WoP8EzH4dvQTy0gi3RCoOnF21mYNqIVaeZvz90f4CfwdC76O-_tkVxlii9VuGO4nk-FXQhZ4oFfkiZZiiJ3Hvbwu2wHINTXvFIQXaXVv1VLJ0glhy-UC4mvFugxmvrl5mgKHru3j_QhklRBUSxyQFtFjsRBQjQiOedS-uWAUFzTRtp1jV6KbxKpbhZledxJuXGsPY2C9bobts5L1o2aw66DO9VHwtADlslWMHPn0PAglPwmRbAFtOGTUOuQis"/>
+</div>
+<div>
+<h3 class="text-[#111318] dark:text-white font-bold text-base leading-tight">UX Designer</h3>
+<p class="text-[#616e89] dark:text-gray-400 text-sm mt-0.5">Creative Solutions</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="inline-flex items-center rounded-full bg-purple-50 dark:bg-purple-900/30 px-2 py-0.5 text-xs font-medium text-purple-700 dark:text-purple-300 ring-1 ring-inset ring-purple-700/10">Interviewing</span>
+<span class="text-xs text-gray-400">Oct 10</span>
+</div>
+</div>
+<a class="flex items-center gap-1.5 text-primary hover:text-blue-600 dark:hover:text-blue-400 text-sm font-semibold mb-4 w-fit group/link transition-colors" href="#">
+<span>View Job Posting</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-0.5">open_in_new</span>
+</a>
+<div class="h-px w-full bg-gray-100 dark:bg-gray-800 mb-3"></div>
+<div class="flex flex-wrap gap-2">
+<div class="flex items-center gap-2 rounded-lg bg-gray-50 dark:bg-gray-800 px-3 py-2 border border-gray-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[18px]">description</span>
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 uppercase font-bold tracking-wide leading-none">Resume</span>
+<span class="text-xs font-medium text-gray-700 dark:text-gray-200">Creative_CV</span>
+</div>
+</div>
+<div class="flex items-center gap-2 rounded-lg bg-gray-50 dark:bg-gray-800 px-3 py-2 border border-gray-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[18px]">drafts</span>
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 uppercase font-bold tracking-wide leading-none">Cover</span>
+<span class="text-xs font-medium text-gray-700 dark:text-gray-200">Cover_Bold</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Offer -->
+<div class="relative flex flex-col bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-800 hover:border-primary/50 transition-all">
+<div class="flex justify-between items-start mb-3">
+<div class="flex gap-3">
+<div class="h-12 w-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center shrink-0 overflow-hidden">
+<img alt="Global Corp Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW6X4qLMuMViRZGKYhpY5ugDz6Ex4OQwdP-hzbLHL17qQHFCAv3ikRnUp9FBW6LLA83jq8PEok7XWhXCkF2toEESBtW4ohFE7tj4CtSfoNefdhAxkhbEOwC53YqB1O8iLmZZnaJld2cHqtQPMMi6-xRPWa1rbLlVvizS0KGZM4iMg6-sD3QrcUfkrLFkVbalaYpAya-M0seNoUNRx91qmkG2O-hq_wz67i5DKFfUnD_B5TRfzbU7vjCC5okztkpsJf8DL9rpLawbg"/>
+</div>
+<div>
+<h3 class="text-[#111318] dark:text-white font-bold text-base leading-tight">Data Analyst</h3>
+<p class="text-[#616e89] dark:text-gray-400 text-sm mt-0.5">Global Corp</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="inline-flex items-center rounded-full bg-green-50 dark:bg-green-900/30 px-2 py-0.5 text-xs font-medium text-green-700 dark:text-green-300 ring-1 ring-inset ring-green-600/20">Offer</span>
+<span class="text-xs text-gray-400">Oct 05</span>
+</div>
+</div>
+<a class="flex items-center gap-1.5 text-primary hover:text-blue-600 dark:hover:text-blue-400 text-sm font-semibold mb-4 w-fit group/link transition-colors" href="#">
+<span>View Job Posting</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-0.5">open_in_new</span>
+</a>
+<div class="h-px w-full bg-gray-100 dark:bg-gray-800 mb-3"></div>
+<div class="flex flex-wrap gap-2">
+<div class="flex items-center gap-2 rounded-lg bg-gray-50 dark:bg-gray-800 px-3 py-2 border border-gray-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[18px]">description</span>
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 uppercase font-bold tracking-wide leading-none">Resume</span>
+<span class="text-xs font-medium text-gray-700 dark:text-gray-200">Standard_Resume</span>
+</div>
+</div>
+<div class="flex items-center gap-2 rounded-lg bg-gray-50 dark:bg-gray-800 px-3 py-2 border border-gray-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[18px]">drafts</span>
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 uppercase font-bold tracking-wide leading-none">Cover</span>
+<span class="text-xs font-medium text-gray-700 dark:text-gray-200">General_Cover</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4: Rejected (Older) -->
+<div class="flex items-center justify-between mt-4">
+<h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">September 2023</h3>
+</div>
+<div class="relative flex flex-col bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-800 hover:border-primary/50 transition-all opacity-80 hover:opacity-100">
+<div class="flex justify-between items-start mb-3">
+<div class="flex gap-3">
+<div class="h-12 w-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center shrink-0 overflow-hidden">
+<img alt="Startup Inc Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASB0r6sbGGfw8-MeQJz89D9Lw3cSy2se3OkKDx71cdR0cIdNTTziwRlXysKd18wfV0DyZ-MM5UWo0DbWR5MzqBRPR4zc8bOXHS3W5dA3uBvQJpXG3o6q6ZNMQiPojQSl0K6H_AHHAGCPNS3ydduII9FWa1hCsZr79MUUmm8FD4c-wcbTjGbX18X7hor1jqHHOnwLnV0Fu1WeiIEc_aG_3aigthyCFPNJP4gMp0qOqGrWjub0bEw0aVllWLfv0tfropXWtZYpXritY"/>
+</div>
+<div>
+<h3 class="text-[#111318] dark:text-white font-bold text-base leading-tight">Frontend Developer</h3>
+<p class="text-[#616e89] dark:text-gray-400 text-sm mt-0.5">Startup Inc.</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-800 px-2 py-0.5 text-xs font-medium text-gray-600 dark:text-gray-300 ring-1 ring-inset ring-gray-500/10">No Offer</span>
+<span class="text-xs text-gray-400">Sep 28</span>
+</div>
+</div>
+<a class="flex items-center gap-1.5 text-primary hover:text-blue-600 dark:hover:text-blue-400 text-sm font-semibold mb-4 w-fit group/link transition-colors" href="#">
+<span>View Job Posting</span>
+<span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-0.5">open_in_new</span>
+</a>
+<div class="h-px w-full bg-gray-100 dark:bg-gray-800 mb-3"></div>
+<div class="flex flex-wrap gap-2">
+<div class="flex items-center gap-2 rounded-lg bg-gray-50 dark:bg-gray-800 px-3 py-2 border border-gray-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[18px]">description</span>
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 uppercase font-bold tracking-wide leading-none">Resume</span>
+<span class="text-xs font-medium text-gray-700 dark:text-gray-200">Dev_Resume_V1</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
